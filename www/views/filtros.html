@@ -1,0 +1,22 @@
+<ion-view view-title="Filtros">
+    <ion-content>
+        <div class="list">
+            <div class="item item-divider">
+                Mínimo: {{min| currency}}
+            </div>
+            <div class="iten range">
+                <i class="icon ion-social-usd-outline"></i>
+                <input type="range" name="min" min="0" max="{{maior}}" ng-model="min" ng-change="updateMin(min)">
+                <i class="icon ion-social-usd"></i>
+            </div>
+            <div class="item item-divider">
+                Máximo: {{max| currency}}
+            </div>
+            <div class="iten range">
+                <i class="icon ion-social-usd-outline"></i>
+                <input type="range" name="max" min="0" max="{{maior}}" ng-model="max" ng-change="updateMax(max)">
+                <i class="icon ion-social-usd"></i>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

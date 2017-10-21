@@ -1,0 +1,18 @@
+<ion-view view-title="Principal">
+    <ion-nav-buttons side="primary">
+        <button class="button button-icon icon ion-navicon" ng-click="showFilters()"></button>
+    </ion-nav-buttons>
+    <ion-content>
+        <ion-list>
+            <ion-item ng-show="produtosLoaded && filtered.length == 0">
+                <p>Nenhum produto atende aos critérios dos filtros...</p>
+            </ion-item>
+            <ion-item class="item-thumbnail-left" ng-repeat="p in produtos| filter: filtro as filtered" href="#/produto/{{p.id}}">
+                <img src="data:image/png;base64,{{p.imagem}}" alt="Imagem do produto {{p.nome}}">
+                <h2 class="">{{p.nome}}</h2>
+                <h3>{{p.categoria.nome}}</h3>
+                <p>{{p.preco| currency}}</p>
+            </ion-item>
+        </ion-list>
+    </ion-content>
+</ion-view>

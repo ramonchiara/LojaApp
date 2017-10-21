@@ -1,0 +1,14 @@
+<ion-view view-title="{{produto.nome}}">
+    <ion-content>
+        <div class="list card">
+            <div class="item">
+                <h2>{{produto.nome}}</h2>
+                <p>{{produto.preco| currency}}</p>
+            </div>
+            <div class="item item-image">
+                <img src="data:image/png;base64,{{produto.imagem}}" alt="Imagem do produto {{produto.nome}}">
+                <button class="button button-full button-assertive">Comprar</button>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>
