@@ -8,7 +8,7 @@
                 <p>Nenhum produto atende aos critérios dos filtros...</p>
             </ion-item>
             <ion-item class="item-thumbnail-left" ng-repeat="p in produtos| filter: filtro as filtered" href="#/produto/{{p.id}}">
-                <img src="data:image/png;base64,{{p.imagem}}" alt="Imagem do produto {{p.nome}}">
+                <img ng-src="https://lorempixel.com/96/96/technics/{{p.id}}" alt="Imagem do produto {{p.nome}}">
                 <h2 class="">{{p.nome}}</h2>
                 <h3>{{p.categoria.nome}}</h3>
                 <p>{{p.preco| currency}}</p>

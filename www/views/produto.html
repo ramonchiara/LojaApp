@@ -5,9 +5,10 @@
                 <h2>{{produto.nome}}</h2>
                 <p>{{produto.preco| currency}}</p>
             </div>
-            <div class="item item-image">
-                <img src="data:image/png;base64,{{produto.imagem}}" alt="Imagem do produto {{produto.nome}}">
-                <button class="button button-full button-assertive">Comprar</button>
+            <div class="item item-body">
+                <img ng-src="https://lorempixel.com/384/384/technics/{{produto.id}}" alt="Imagem do produto {{produto.nome}}" style="max-width: 100%">
+                <p>{{produto.descricao}}</p>
+                <p><button class="button button-full button-assertive">Comprar</button></p>
             </div>
         </div>
     </ion-content>

@@ -86,7 +86,7 @@ app.service('$produtos', function ($http, $q) {
         load: function () {
             return $q(function (resolve, reject) {
                 if (produtos.length === 0) {
-                    $http.get('https://ramon.pro.br/Loja/webresources/produtos')
+                    $http.get('produtos.json')
                             .then(function (response) {
                                 produtos = response.data.produtos;
                                 resolve(produtos);
